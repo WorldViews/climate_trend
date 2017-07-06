@@ -67,7 +67,6 @@ class Chart{
 		  scale: this.scale
 		});
 
-
 		// draw line
 		view.array({
 		  id: this.id,
@@ -98,7 +97,7 @@ class Chart{
 			opacity: 0.8,
 			color: this.dotColor,
                         zIndex: 21, //DGK
-			size: 60
+			size: 80
 		})
 
 		view.array({
@@ -113,7 +112,7 @@ class Chart{
 			opacity: 1,
 			color: 0xffffff,
                         zIndex: 22, //DGK
-			size: 20
+			size: 30
 		})
 
 	    this.lineendMarkPos = this.mathbox.select('#'+this.id+'-lineend-point-pos')
@@ -131,7 +130,7 @@ class Chart{
 		  live: false
 		}).line({
 			id: this.id+'-rcp8p5-line',
-			opacity: 0.5,
+			opacity: 1,
 			zIndex: 10,
 			color: this.color,
 			// colors: this.colors,
@@ -150,7 +149,7 @@ class Chart{
 		  live: false
 		}).line({
 			id: this.id+'-rcp2p6-line',
-			opacity: 0.5,
+			opacity: 1,
 			zIndex: 10,
 			color: this.color,
 			// colors: this.colors,
@@ -182,8 +181,8 @@ class Chart{
 		view.transform({position:[0, 0, this.z_offset]})
 		.grid({
 			axes: "xy",
-			divideX: 4,
-			divideY: 4,
+			divideX: 1,
+			divideY: 1,
 			niceX: false,
 			niceY: false,
 			width: params.chartGridLineWidth,
@@ -304,7 +303,9 @@ class Chart{
 	update(y){
 		var newData=_.zip(this.x, y, this.z)
 		// this.chart =this.mathbox.select("#"+this.id)
-		this.chart.set('data', newData)
+
+		// don't update the chart to move the graph
+		// this.chart.set('data', newData)
 
 		this.lineendMarkPos.set('data', 
 			[[Year, y[Year-1850], this.z_offset]]

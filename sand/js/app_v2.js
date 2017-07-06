@@ -214,8 +214,8 @@ var drawGrid = (view, origin)=>{
 	})
 	.grid({
 		axes: "zx",
-		divideX: 4,
-		divideY: 5,
+		divideX: 1,
+		divideY: 1,
 		niceX: false,
 		niceY: false,
 		width: lineWidth
@@ -227,8 +227,8 @@ var drawGrid = (view, origin)=>{
 	})
 	.grid({
 		axes: "yz",
-		divideX: 4,
-		divideY: 4,
+		divideX: 1,
+		divideY: 1,
 		niceX: false,
 		niceY: false,
 		width: lineWidth

@@ -24,9 +24,9 @@ var interpolate = (lo, hi, n) => {
 var smoothEnergyBalance = data => {
 	var types = ['rcp8p5', 'rcp2p6', 'active']
 
-	types.forEach(type=>{
+	types.forEach(type => {
 		applySmooth(data[type].balance)
-	})
+	});
 
 	return data
 }

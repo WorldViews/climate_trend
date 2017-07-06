@@ -2,16 +2,17 @@
 var paramsDefault = {
     labelSize: 60,
     gridLineWidth: 5,
-    chartGridLineWidth: 3,
-    envelopeLineWidth: 3,
-    refLineWidth: 3,
+    chartGridLineWidth: 10,
+    envelopeLineWidth: 10,
+    refLineWidth: 10,
     co2LineWidth: 20,
     tempLineWidth: 60,
     balanceLineWidth: 30,
-    hideLegend: false,
+    hideLegend: true,
     showPanel: true,
     showGraphics: true,
     showVideo: false,
+    yearsPerMinute: 25,
 
     colors: {
         x: '#FF4136',

@@ -100,7 +100,8 @@ var year_per_minute = 25 // * 12 // 25=>18min
 var endYear = 2300
 
 var yearsToSec=(year)=>{
-	var sec_per_year = 60/year_per_minute
+	var ypm = params.yearsPerMinute || year_per_minute;
+	var sec_per_year = 60/ypm;
 	return (year-startYear) * sec_per_year
 }
 
