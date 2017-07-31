@@ -304,8 +304,7 @@ class Chart{
 		var newData=_.zip(this.x, y, this.z)
 		// this.chart =this.mathbox.select("#"+this.id)
 
-		// don't update the chart to move the graph
-		// this.chart.set('data', newData)
+		this.chart.set('data', newData)
 
 		this.lineendMarkPos.set('data', 
 			[[Year, y[Year-1850], this.z_offset]]
